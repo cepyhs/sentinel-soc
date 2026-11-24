@@ -1,0 +1,11 @@
+Nov 24 17:10:01 linux-mint sshd[1021]: Failed password for root from 185.220.101.45 port 44120 ssh2
+Nov 24 17:10:03 linux-mint sshd[1022]: Failed password for invalid user admin from 185.220.101.45 port 44125 ssh2
+Nov 24 17:10:04 linux-mint sshd[1023]: Failed password for invalid user deploy from 185.220.101.45 port 44130 ssh2
+Nov 24 17:10:06 linux-mint sshd[1024]: Failed password for root from 185.220.101.45 port 44132 ssh2
+Nov 24 17:10:07 linux-mint sshd[1025]: Failed password for ubuntu from 185.220.101.45 port 44140 ssh2
+Nov 24 17:11:12 linux-mint systemd-resolved[512]: DNS_QUERY: portal.upi.edu from 192.168.1.15
+Nov 24 17:11:15 linux-mint systemd-resolved[512]: DNS_QUERY: github.com from 192.168.1.15
+Nov 24 17:11:19 linux-mint systemd-resolved[512]: DNS_QUERY: x9k4m2p8q7z1w5v3n6b8c4.c2-exfil-node.net from 192.168.1.24
+Nov 24 17:12:01 linux-mint sshd[1030]: Failed password for cepy from 103.45.12.8 port 51200 ssh2
+Nov 24 17:12:15 linux-mint sshd[1031]: Failed password for cepy from 45.33.22.11 port 51205 ssh2
+Nov 24 17:12:40 linux-mint sshd[1032]: Failed password for cepy from 91.189.91.4 port 51210 ssh2
