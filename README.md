@@ -26,7 +26,7 @@ flowchart LR
 ## Quick Start
 
 ~~~bash
-git clone https://github.com/<USERNAME_GITHUB>/sentinel-soc.git
+git clone https://github.com/cepyhs/sentinel-soc.git
 cd sentinel-soc
 
 # (Optional) Set AbuseIPDB API key for live threat intelligence
