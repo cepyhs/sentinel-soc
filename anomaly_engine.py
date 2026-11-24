@@ -2,6 +2,15 @@ import math
 import statistics
 from collections import Counter
 
+# Domain CDN/Cloud sah yang secara alami menggunakan subdomain acak berentropi tinggi
+TRUSTED_INFRA_SUFFIXES = (
+    ".cloudfront.net",
+    ".googleapis.com",
+    ".akamaiedge.net",
+    ".amazonaws.com",
+    ".fastly.net",
+)
+
 
 def calculate_shannon_entropy(text: str) -> float:
     """Menghitung entropi Shannon (bit per karakter) untuk mendeteksi string acak/terenkripsi."""
@@ -17,15 +26,27 @@ def calculate_shannon_entropy(text: str) -> float:
 
 
 def detect_dns_tunneling(domain: str, threshold: float = 3.8) -> dict:
-    """Menganalisis subdomain untuk mendeteksi potensi penyelundupan data via DNS."""
-    subdomain = domain.split(".")[0]
+    """Menganalisis subdomain untuk mendeteksi DNS tunneling dengan filter allowlist CDN."""
+    normalized = domain.lower().strip(".")
+    subdomain = normalized.split(".")[0]
     entropy = calculate_shannon_entropy(subdomain)
+
+    if normalized.endswith(TRUSTED_INFRA_SUFFIXES):
+        return {
+            "domain": normalized,
+            "subdomain": subdomain,
+            "entropy": entropy,
+            "is_anomalous": False,
+            "note": "Suppressed (Trusted CDN/Cloud Suffix)",
+        }
+
     is_anomalous = entropy >= threshold and len(subdomain) >= 12
     return {
-        "domain": domain,
+        "domain": normalized,
         "subdomain": subdomain,
         "entropy": entropy,
         "is_anomalous": is_anomalous,
+        "note": "High-entropy randomized label" if is_anomalous else "Normal",
     }
 
 

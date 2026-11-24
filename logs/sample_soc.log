@@ -9,3 +9,4 @@ Nov 24 17:11:19 linux-mint systemd-resolved[512]: DNS_QUERY: x9k4m2p8q7z1w5v3n6b
 Nov 24 17:12:01 linux-mint sshd[1030]: Failed password for cepy from 103.45.12.8 port 51200 ssh2
 Nov 24 17:12:15 linux-mint sshd[1031]: Failed password for cepy from 45.33.22.11 port 51205 ssh2
 Nov 24 17:12:40 linux-mint sshd[1032]: Failed password for cepy from 91.189.91.4 port 51210 ssh2
+Nov 24 17:13:02 linux-mint systemd-resolved[512]: DNS_QUERY: d3k9x7m2p4q8w1.cloudfront.net from 192.168.1.15
